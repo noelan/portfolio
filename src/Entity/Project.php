@@ -29,12 +29,12 @@ class Project
     /**
      * @ORM\Column(type="datetime")
      */
-    private $date_start;
+    private $dateStart;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $date_end;
+    private $dateEnd;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -87,24 +87,24 @@ class Project
 
     public function getDateStart(): ?\DateTimeInterface
     {
-        return $this->date_start;
+        return $this->dateStart;
     }
 
-    public function setDateStart(\DateTimeInterface $date_start): self
+    public function setDateStart(\DateTimeInterface $dateStart): self
     {
-        $this->date_start = $date_start;
+        $this->dateStart = $dateStart;
 
         return $this;
     }
 
     public function getDateEnd(): ?\DateTimeInterface
     {
-        return $this->date_end;
+        return $this->dateEnd;
     }
 
-    public function setDateEnd(\DateTimeInterface $date_end): self
+    public function setDateEnd(\DateTimeInterface $dateEnd): self
     {
-        $this->date_end = $date_end;
+        $this->dateEnd = $dateEnd;
 
         return $this;
     }

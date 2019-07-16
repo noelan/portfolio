@@ -1,0 +1,68 @@
+@font-face {
+	font-family:"inter";
+	src:url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+}
+
+h1 {
+	font-family: "inter";
+}
+
+.myRow {
+	
+}
+
+.imgDiv {
+	background-size: cover;
+	border: solid;
+	position: relative;
+}
+
+
+.projectImg {
+	opacity: 1;
+}
+
+
+.myRow {
+	height: 80vh;
+	overflow: hidden;
+	transition: 2s;
+}
+
+.myRow:hover .projectImg {
+	opacity: 0.3;
+}
+
+.myRow:hover .projectName {
+	opacity: 1;
+}
+
+.myRow:hover .projectDescription {
+	opacity: 1;
+}
+
+.projectName {
+	position: absolute;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -1000%);
+  	color: #ffa;
+	text-shadow: #343a40 2px 2px;
+	opacity: 0;
+}
+
+.projectDescription {
+	position: absolute;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	color: #ffa;
+	text-shadow: #343a40 2px 2px;
+	opacity: 0;
+}
+
+
+
+
+
+
