@@ -17,7 +17,7 @@ class ProjectFixtures extends Fixture
     			->setDateStart(new \DateTime('06/04/2018'))
     			->setDateEnd(new \DateTime('06/04/2019'))
     			->setUrl('https://www.pexels.com/')
-    			->setPhoto('https://www.pixelstalk.net/wp-content/uploads/2016/11/Calm-Desktop-Wallpaper.jpg')
+    			->setPhoto('https://images.pexels.com/photos/56007/jause-eat-delicious-food-56007.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
     			->setIsSolo(true)
     			->setTechno('Php, Html, Css');
 
@@ -29,7 +29,7 @@ class ProjectFixtures extends Fixture
     			->setDateStart(new \DateTime('06/04/2018'))
     			->setDateEnd(new \DateTime('06/09/2019'))
     			->setUrl('https://www.pexels.com/')
-    			->setPhoto('https://www.pixelstalk.net/wp-content/uploads/2016/11/Calm-Desktop-Wallpaper.jpg')
+    			->setPhoto('https://images.pexels.com/photos/860662/pexels-photo-860662.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
     			->setIsSolo(false)
     			->setTechno('Php, Html, OK++');
 

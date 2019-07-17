@@ -8,34 +8,18 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Email</th>
-                <th>Roles</th>
-                <th>Password</th>
                 <th>Firstname</th>
                 <th>Lastname</th>
-                <th>Tel</th>
-                <th>Adresse</th>
-                <th>Linkedin</th>
-                <th>Description</th>
-                <th>Picture</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         {% for user in users %}
             <tr>
-                <td>{{ user.id }}</td>
                 <td>{{ user.email }}</td>
-                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-                <td>{{ user.password }}</td>
                 <td>{{ user.firstname }}</td>
                 <td>{{ user.lastname }}</td>
-                <td>{{ user.tel }}</td>
-                <td>{{ user.adresse }}</td>
-                <td>{{ user.linkedin }}</td>
-                <td>{{ user.description }}</td>
-                <td>{{ user.picture }}</td>
                 <td>
                     <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
                     <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>

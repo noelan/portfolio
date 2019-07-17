@@ -1,68 +1,75 @@
-@font-face {
-	font-family:"inter";
-	src:url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+body {
+	font-family: 'Roboto Mono';
 }
 
 h1 {
-	font-family: "inter";
+	font-family: 'Roboto Mono';
 }
 
-.myRow {
-	
+html,
+body {
+width: 100%;
+height: 100%;
 }
 
-.imgDiv {
-	background-size: cover;
-	border: solid;
+.hero::before {
+background-image: url("https://images.pexels.com/photos/1520108/pexels-photo-1520108.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+background-size: cover;
+background-attachment: fixed;
+content: "";
+display: block;
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: -2;
+opacity: 0.4;
+}
+
+.leftCol {
+	background-color: #403A3A;
+	top :0;
+	bottom:0;	
+}
+
+.accordeon {	
+  position: sticky;
+  top: 0;
+  background-color: green;
+  border: 2px solid #4CAF50;
+}
+
+#projectDiv {
+	background-color: rgba(100, 100, 100);
+	opacity: 0;
+	transition: 1s;
+	position:relative;
+	height: 100%;
+}
+
+#projectDiv:hover {
+	background-color: rgb(100, 100, 100);
+	opacity: 1;
+	color:white;
+}	
+
+.myImg {
+	position: absolute;
+	left:0;
+	right: 0;
+	transition: 1s;
+	top: 0;
+	bottom: 0;
+	height:100%;
+	margin: auto;
+}
+
+.papaDiv:hover > .myImg {
+	opacity: 0;
+}
+
+.papaDiv {
 	position: relative;
+	left:0;
+	right: 0;
 }
-
-
-.projectImg {
-	opacity: 1;
-}
-
-
-.myRow {
-	height: 80vh;
-	overflow: hidden;
-	transition: 2s;
-}
-
-.myRow:hover .projectImg {
-	opacity: 0.3;
-}
-
-.myRow:hover .projectName {
-	opacity: 1;
-}
-
-.myRow:hover .projectDescription {
-	opacity: 1;
-}
-
-.projectName {
-	position: absolute;
-	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -1000%);
-  	color: #ffa;
-	text-shadow: #343a40 2px 2px;
-	opacity: 0;
-}
-
-.projectDescription {
-	position: absolute;
-	top: 50%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
-  	color: #ffa;
-	text-shadow: #343a40 2px 2px;
-	opacity: 0;
-}
-
-
-
-
-
-

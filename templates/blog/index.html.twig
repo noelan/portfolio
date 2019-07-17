@@ -1,28 +1,95 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<div class="container">
-	<div class="row justify-content-center">
-		<h1 class="p-3">About Me</h1>
-	</div>
+<div class="container-fluid" id="allElement">	
 	<div class="row">
-		<p> {{ user.firstname ~ " " ~ user.lastname }}</p>
-		<p>{{ user.description }}</p>
-	</div>
-	</div>	
-</div>
-<div class="container-fluid">
+		<div class="col-2 leftCol"><br><br><br>
+			<!-- accordéon -->
+			<div class="accordion accordeon" id="accordionExample">
+			  <div class="card">
+			    <div class="card-header" id="headingOne">
+			      <h2 class="mb-0">
+			        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+			          Skill
+			        </button>
+			      </h2>
+			    </div>
+			    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+			      <div class="card-body">
+			      	<p>Git</p>
+			      	<p>Sql</p>
+			      	<p>Php</p>
+			      	<p>Bootstrap</p>
+			      	<p>UiKit ?</p>
+			      	<p>Javascript</p>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="card">
+			    <div class="card-header" id="headingTwo">
+			      <h2 class="mb-0">
+			        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+			          Contact
+			        </button>
+			      </h2>
+			    </div>
+			    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+			      <div class="card-body">
+			      	<p>Tel :</p>
+			      	<p>{{ user.tel }}</p>
+			      	<p>Email :</p>
+			      	<p>{{ user.email }}</p>
+			      	<a href="{{ user.linkedin }}"><p>Linkedin</p></a>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+		<!-- fin accordéon -->
+		<div class="col">	
+	<div class="row justify-content-between">
+		<div  class="col-8 text-center">
+			<p class="text-center font-weight-bold" style="font-size:10vh;"> {{ user.firstname ~ " " ~ user.lastname }}
+			</p>
+			<p class="font-weight-bold" style="font-size:6vh;color:#4F74CA;">Dev Web junior</p>
+		</div>
+		<div class="col">
+			<img class="rounded-circle img-fluid" width="140" src="{{ user.picture }}" style="padding-top:3vh;">
+		</div>
+	</div><hr>
+	<div class="row">
+		<div class="col">
+			<p class="text-justify">{{ user.description }}</p>
+		</div>
+	</div><hr>
+	
+<div class="container">
 	{% for project in projects %}
-	<div class="row myRow">
-		<div class="imgDiv">
-			<img class="projectImg img-fluid" src="{{ project.photo }}">
-		<div class="projectName">	
-			<h3>{{ project.name }}</h3>
-	    </div>
-	    <div class="projectDescription">
-	    	<p>{{ project.description }}</p>
-	    </div>	
-	    </div>
-	</div><br/><br/>
+	
+		<div class="row justify-content-center">
+			<h2 style="color:#4F74CA;opacity:1;">{{ project.name }}</h2>
+		</div>
+	<div class="papaDiv">
+		<div class="myImg row justify-content-center">	
+			<a href="{{ project.url }}"><img class="img-fluid myImg" src="{{ project.photo }}"></a>
+		</div>		
+		<div id="projectDiv" class="p-3">
+			<div class="row justify-content-center">
+				<div class="col-lg-6 col-sm-12" style="border-right:solid;">
+							<p class="text-justify">{{ project.description }}</p>
+				</div>
+				<div class="col-lg-3">
+					<p>Techno: {{ project.techno }}</p>
+					<p>
+						Durée : du {{ project.dateStart|date('Y/m/d') ~ " au " ~ project.dateEnd|date('Y/m/d')}}
+					</p>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<hr>
 	{% endfor %}
+</div>	
+</div>
+</div>
 </div>
 {% endblock %}
